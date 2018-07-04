@@ -44,9 +44,10 @@ def lambda_q_learning(Q, episodes, env, alpha, gamma, l=0.2, eps=0.0):
             episode_length += 1
             a = eps_greedy_action(Q, s, eps=eps)
             s_, reward, done, _ = env.step(a)
-            if episode > episodes - 5:
-                trajectory.append([19 * (s_[0]+1.2)/1.8, 19 * (s_[1]+.07)/.14])
+            if episode > episode - 5:
                 env.render()
+            if episode == episodes - 1:
+                trajectory.append([19 * (s_[0]+1.2)/1.8, 19 * (s_[1]+.07)/.14])
             s_ = discretize(s_)
             a_ = eps_greedy_action(Q, s_, eps=eps) 
             a_star = np.argmax(Q[s_])
