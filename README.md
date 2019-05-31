@@ -2,7 +2,7 @@
 
 Reinforcement Learning, where agents learn from actively interacting with the environment
 
-!(Mountain Car learning to reach the flag in a sparse reward environment)[eligibility_traces/m_car.gif]
+!(Mountain Car learning to reach the flag in a sparse reward environment)[/eligibility_traces/m_car.gif]
 
 ## About
 
